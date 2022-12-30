@@ -29,16 +29,20 @@ Then in the main form, the `Load` event can be used to set up the columns and fo
         #region F O R M A T    C O L U M N S
         DataGridViewColumn col;
         Products.Add(new Product());
+
         // Format existing Name column
         dataGridView.Columns[nameof(Product.Name)].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
         // Format existing Barcode column
         col = dataGridView.Columns[nameof(Product.Barcode)];
         col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         col.DefaultCellStyle.Font = _barcodeFont;
+
         // Format existing Price column
         col = dataGridView.Columns[nameof(Product.Price)];
         col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         col.DefaultCellStyle.Format = "N2";
+
         // Add the Save button column and format the button style.
         col = new DataGridViewButtonColumn{
             Text = "Save",
@@ -46,9 +50,10 @@ Then in the main form, the `Load` event can be used to set up the columns and fo
             Width = 90,
             FlatStyle = FlatStyle.Flat
         };
-        // Add the Delete button column and format the button style.
         col.DefaultCellStyle.BackColor = Color.AliceBlue;
         dataGridView.Columns.Add(col);
+
+        // Add the Delete button column and format the button style.
         col = new DataGridViewButtonColumn
         {
             Text = "Delete",

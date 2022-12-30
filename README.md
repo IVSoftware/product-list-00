@@ -3,12 +3,12 @@ Your [question](https://stackoverflow.com/q/74962863/5438626) is about **setting
 [![minimal sample][1]][1]
 
 ***
-The `BindingList<Product>` contains objects of a class you define to represent a row:
+The data source is a `BindingList<Product>` containing objects of a class you have defined to represent a row:
 
     // Minimal product class for example
     class Product
     {
-        // Read-only fields for this example.
+        // Read-only cells for this example.
         public string Name { get; internal set; }
         public double Price { get; internal set; }
         public string Barcode { get; internal set; } =
@@ -67,7 +67,7 @@ Then in the main form, the `Load` event can be used to set up the columns and fo
         #endregion F O R M A T    C O L U M N S
 
         // Add a few products
-        Products.Add(new Product { Name = "Coffee", Price = 3.99 });
+        Products.Add(new Product { Name = "Coffee", Price = 13.99 });
         Products.Add(new Product { Name = "Milk", Price = 5.49 });
         Products.Add(new Product { Name = "Eggs", Price = 4.29 });
     }
@@ -75,4 +75,4 @@ Then in the main form, the `Load` event can be used to set up the columns and fo
  
 
 
-  [1]: https://i.stack.imgur.com/rjKtK.png
+  [1]: https://i.stack.imgur.com/CqwFV.png

@@ -54,7 +54,7 @@ namespace product_list_00
             #endregion F O R M A T    C O L U M N S
 
             // Add a few products
-            Products.Add(new Product { Name = "Coffee", Price = 3.99 });
+            Products.Add(new Product { Name = "Coffee", Price = 13.99 });
             Products.Add(new Product { Name = "Milk", Price = 5.49 });
             Products.Add(new Product { Name = "Eggs", Price = 4.29 });
         }

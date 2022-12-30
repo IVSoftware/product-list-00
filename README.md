@@ -1,4 +1,4 @@
-Your question is about **setting the button text of a DataGridView cell button**. Here's an alternative to the currently accepted answer that uses the `UseColumnTextForButtonValue` and `Text` properties of the Column to set "Save" and "Delete" for the buttons. This example _also_ uses the `DataSource` property of the `DataGridView` to attach a list of records where the `Record` class represents a row of data. This often makes things easier because you can work with the underlying data directly. The initialization code is shown below.
+Your [question](https://stackoverflow.com/q/74962863/5438626) is about **setting the button text of a DataGridView cell button**. Here's an alternative to the currently accepted answer that uses the `UseColumnTextForButtonValue` and `Text` properties of the Column to set "Save" and "Delete" for the buttons. This example _also_ uses the `DataSource` property of the `DataGridView` to attach a list of records where the `Record` class represents a row of data. This often makes things easier because you can work with the underlying data directly. The initialization code is shown below.
 
 [![minimal sample][1]][1]
 

@@ -21,6 +21,7 @@ namespace product_list_00
             initBarcodeFont();
             dataGridView.AllowUserToAddRows = false;
             dataGridView.DataSource = Products;
+            dataGridView.RowTemplate.Height = 100;
 
             #region F O R M A T    C O L U M N S
             DataGridViewColumn col;
@@ -35,7 +36,7 @@ namespace product_list_00
             col = new DataGridViewButtonColumn{
                 Text = "Save",
                 UseColumnTextForButtonValue = true,
-                Width = 75,
+                Width = 90,
                 FlatStyle = FlatStyle.Flat
             };
             col.DefaultCellStyle.BackColor = Color.AliceBlue;
@@ -44,7 +45,7 @@ namespace product_list_00
             {
                 Text = "Delete",
                 UseColumnTextForButtonValue = true,
-                Width = 75,
+                Width = 90,
                 FlatStyle = FlatStyle.Flat
             };
             col.DefaultCellStyle.BackColor = Color.AliceBlue;
@@ -68,7 +69,7 @@ namespace product_list_00
                     "free3of9.ttf"
                 ));
             var fontFamily = _fonts.Families[0];
-            _barcodeFont = new Font(fontFamily, 12F);
+            _barcodeFont = new Font(fontFamily, 50F);
         }
         private PrivateFontCollection _fonts = new PrivateFontCollection();
         private Font _barcodeFont;
@@ -77,9 +78,10 @@ namespace product_list_00
     // Minimal product class for example
     class Product
     {
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public string Barcode { get; set; } =
+        // Read-only fields for this example.
+        public string Name { get; internal set; }
+        public double Price { get; internal set; }
+        public string Barcode { get; internal set; } =
             $"*{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}*";
     }
 }
